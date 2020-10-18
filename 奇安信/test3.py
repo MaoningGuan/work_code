@@ -1,7 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-def factor(N):
-    N2 = N
-    a = list(range(1, N+1))
-    while N2 > 1:
-        N1 = N2%2
+if __name__ == '__main__':
+    N = int(input().strip())
+    if 1 <= N <= 200:
+        res = 1
+        for i in range(2, N + 1):
+            res *= i
+        print(res)
+    else:
+        print('Error')
